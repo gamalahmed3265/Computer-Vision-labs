@@ -9,8 +9,8 @@ def noThing(x):
 
 
 
-url="C:\Projects\Collage\ML\computer vision\image"
-img=f"{url}\shape.png"
+url="assets"
+img=f"{url}\sudoku.png"
 
 
 img=cv.imread(img,0)
