@@ -6,7 +6,7 @@ import os
 def isExists(path: str):
     assert os.path.exists(path)
     
-def resize(img):
+def resize(img :np.ndarray):
     #img=cv.resize(img,(550,250)) # w,h
     scale_percent = 30
     width = int(img.shape[1] * scale_percent / 100)
