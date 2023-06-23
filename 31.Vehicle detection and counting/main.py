@@ -32,7 +32,6 @@ cap=cv.VideoCapture(path)
 
 
 
-count=0
 while True:
     rat,frame=cap.read()
     if frame is None:
@@ -40,7 +39,7 @@ while True:
     
     frame=resize(frame,flag=False,size=(750,450))
     
-    DetectionTracking(frame,count)
+    DetectionTracking(frame)
 
     cv.imshow("frame",frame)
     

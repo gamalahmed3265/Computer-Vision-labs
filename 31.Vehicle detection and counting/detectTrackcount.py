@@ -7,11 +7,11 @@ track=TrackerMaster()
 # font=cv2.FONT_HERSHEY_PLAIN
 font=cv2.FONT_HERSHEY_SIMPLEX
 
-BGS= cv2.createBackgroundSubtractorMOG2(history=100)
+BGS= cv2.createBackgroundSubtractorMOG2(history=10)
 
 
-ww=80
-hh=80
+ww=50
+hh=50
 
 detec=[]
 offset=6
@@ -24,7 +24,9 @@ def page_center(x,y,w,h):
     cy=y+w
     return cx,cy
 
-def DetectionTracking(frame: np.ndarray,count:int):
+
+count=0
+def DetectionTracking(frame: np.ndarray):
     gray=grayImage(frame)
     #blur
     blur=cv2.GaussianBlur(gray,(3,3),5)
@@ -54,8 +56,9 @@ def DetectionTracking(frame: np.ndarray,count:int):
         
         for (x,y) in detec:
             if y<(y1+offset) and y>(y1-offset):
+                global count
                 count+=1
-                cv2.line(frame,(25,y1),(1200,y1),(172,88,3),3)
+                cv2.line(frame,(25,y1),(1200,y1),(0,170,3),3)
                 detec.remove((x,y))
                 print(f"No. cars{count}")
                 
