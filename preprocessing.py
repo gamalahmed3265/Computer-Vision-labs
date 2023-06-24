@@ -56,5 +56,23 @@ def getFonts(switch:int=0):
     except:
         print("list index out of range")
         return fonts[0]
+    
+def getImage(switch:int=0):
+    return [
+        "early.png",
+        "orange.png",
+        "apple.png",
+        "contours.png",
+        "logo.png",
+        "Geometric Shapes .png",
+        "car.png",
+        "car plat.png",
+        ][switch]
 
-
+def getVideo(switch:int=0):
+    return [
+        "pepole.mp4",
+        "highway.mp4",
+        "Vehicle detection and counting.mp4",
+        "eyes.mp4",
+        ][switch]
