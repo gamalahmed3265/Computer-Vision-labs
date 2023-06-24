@@ -16,10 +16,10 @@ from detectTrackcount import DetectionTracking
 # videoName="pepole.mp4"
 # videoName="highway.mp4"
 # videoName="Vehicle detection and counting.mp4"
-videoName="eyes.mp4"
-path=f"{url}/{videoName}"
+# videoName="eyes.mp4"
+# path=f"{url}/{videoName}"
 
-isExists(path)
+# isExists(path)
 
 ######### img #########
 
@@ -43,7 +43,7 @@ isExists(path)
 
 
 ######### video #########
-cap=cv.VideoCapture(path)
+cap=cv.VideoCapture(0)
 
 # w,h=getDimVideo(cap)
 
@@ -55,7 +55,7 @@ while True:
         break
     frame=resize(frame,scale_percent=60)
     
-    DetectionTracking(frame,roi)
+    DetectionTracking(frame)
     # cv.imshow("frame",frame)
 
     # cv.setMouseCallback('frame',clickEventImg)

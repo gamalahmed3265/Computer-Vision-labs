@@ -18,7 +18,7 @@ predictor=dlib.shape_predictor("shape_predicor_68_face_landmarks.dat")
 
 
 
-def DetectionTracking(frame: np.ndarray, roi:np.ndarray):
+def DetectionTracking(frame: np.ndarray):
     gray=grayImage(frame)
     faces=detector(gray)
     for face in faces:
