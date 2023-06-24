@@ -45,3 +45,16 @@ def closeImg():
 def clickEventImg(event,x,y,flags,param):
     if event==cv.EVENT_LBUTTONDOWN:
         print(x,y)
+def getFonts(switch:int=0):
+    fonts=[
+    cv.FONT_HERSHEY_SIMPLEX,
+    cv.FONT_HERSHEY_PLAIN ,
+    cv.FONT_HERSHEY_COMPLEX,
+    ]
+    try:
+        return fonts[switch]
+    except:
+        print("list index out of range")
+        return fonts[0]
+
+
